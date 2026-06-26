@@ -1,19 +1,12 @@
-# Prakash Knowledge Hub
+# Pi Network Knowledge Hub
 
 A premium, fully responsive personal knowledge platform built with HTML5, Tailwind CSS, and Vanilla JavaScript. Styled as a professional editorial publication in the vein of Medium, Hashnode, and Stripe — with a distinctive purple and gold brand identity.
 
 ## About
 
-Prakash Knowledge Hub is a static content platform by **Prakash Choudhary** — AI Educator, Digital Builder, and Web3 Advocate. The platform covers eight knowledge domains:
+Pi network Knowledge Hub is a static content platform by **Pi Community** — AI Educator, Digital Builder, and Web3 Advocate. The platform covers eight knowledge domains:
 
-- 🤖 Artificial Intelligence
 - π Pi Network
-- ⛓️ Web3 & Blockchain
-- 📊 Data Analytics
-- ✨ Personal Branding
-- 🚀 Digital Growth
-- 🎓 Education
-- 🌾 Agri-Tech
 
 ## Key Features
 
@@ -24,7 +17,6 @@ Prakash Knowledge Hub is a static content platform by **Prakash Choudhary** — 
 - **Responsive** — Mobile-first, works on all screen sizes
 - **Animated** — Intersection Observer scroll animations, hover effects, glassmorphism
 - **SEO Ready** — robots.txt, sitemap.xml, Open Graph, Twitter Cards, Schema.org JSON-LD
-- **20 Sample Articles** — Real content across all 8 categories in `data/articles.json`
 
 ## Technology Stack
 
@@ -98,10 +90,3 @@ No build step required — everything works as static files.
 | Text | `#111827` |
 | Border | `#E5E7EB` |
 
-## Author
-
-**Prakash Choudhary**
-- LinkedIn: [linkedin.com/in/prakashphiroda](https://www.linkedin.com/in/prakashphiroda)
-- Twitter/X: [@Piprotecter](https://x.com/Piprotecter)
-- Portfolio: [prakashfirodawork-ctrl.github.io/Prakash-Identity-Hub/](https://prakashfirodawork-ctrl.github.io/Prakash-Identity-Hub/)
-- Pi Network invitation: `prakashphiroda`
