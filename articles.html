@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Articles — Prakash Knowledge Hub</title>
-  <meta name="description" content="Browse all articles on AI, Pi Network, Web3, Data Analytics, Personal Branding, Digital Growth, Education and Agri-Tech." />
+  <title>Ecosystem Documentation — Pi Network Insights</title>
+  <meta name="description" content="Browse all specialized articles, checklists, and technical reference modules across the core pillars of the Pi Network blockchain." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://prakash-knowledge-hub.netlify.app/articles.html" />
-  <meta property="og:title" content="Articles — Prakash Knowledge Hub" />
-  <meta property="og:description" content="Explore all articles by Prakash Choudhary on AI, Web3, Pi Network, and more." />
+  <meta property="og:title" content="Ecosystem Documentation — Pi Network Insights" />
+  <meta property="og:description" content="Explore documentation and strategy checklists curated by Prakash Choudhary." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,10 +34,10 @@
       <div class="max-w-2xl">
         <span class="hero-badge mb-4 inline-flex">
           <span class="dot"></span>
-          All Articles
+          Knowledge Base
         </span>
-        <h1 class="text-4xl lg:text-5xl font-bold text-white mb-4" style="font-family:Poppins">Browse All Articles</h1>
-        <p class="text-purple-200 text-lg">Practical insights across 8 knowledge domains. Filter by category or search for a topic.</p>
+        <h1 class="text-4xl lg:text-5xl font-bold text-white mb-4" style="font-family:Poppins">Ecosystem Archive</h1>
+        <p class="text-purple-200 text-lg">Structural breakdowns mapping out Node operations, App development cycles, utility commerce, and migration stages.</p>
       </div>
     </div>
   </section>
@@ -46,15 +46,11 @@
   <section class="sticky top-16 z-40 bg-white/95 dark:bg-gray-950/95 backdrop-blur border-b border-gray-200 dark:border-gray-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center gap-3 py-3 overflow-x-auto scrollbar-none">
-        <button class="filter-btn active whitespace-nowrap" data-filter="all" onclick="filterArticles('all', this)">All</button>
-        <button class="filter-btn whitespace-nowrap" data-filter="artificial-intelligence" onclick="filterArticles('artificial-intelligence', this)">🤖 AI</button>
-        <button class="filter-btn whitespace-nowrap" data-filter="pi-network" onclick="filterArticles('pi-network', this)">π Pi Network</button>
-        <button class="filter-btn whitespace-nowrap" data-filter="web3-blockchain" onclick="filterArticles('web3-blockchain', this)">⛓️ Web3</button>
-        <button class="filter-btn whitespace-nowrap" data-filter="data-analytics" onclick="filterArticles('data-analytics', this)">📊 Data</button>
-        <button class="filter-btn whitespace-nowrap" data-filter="personal-branding" onclick="filterArticles('personal-branding', this)">✨ Branding</button>
-        <button class="filter-btn whitespace-nowrap" data-filter="digital-growth" onclick="filterArticles('digital-growth', this)">🚀 Growth</button>
-        <button class="filter-btn whitespace-nowrap" data-filter="education" onclick="filterArticles('education', this)">🎓 Education</button>
-        <button class="filter-btn whitespace-nowrap" data-filter="agri-tech" onclick="filterArticles('agri-tech', this)">🌾 Agri-Tech</button>
+        <button class="filter-btn active whitespace-nowrap" data-filter="all" onclick="filterArticles('all', this)">All Pillars</button>
+        <button class="filter-btn whitespace-nowrap" data-filter="Pi Apps & Utilities" onclick="filterArticles('Pi Apps & Utilities', this)">📱 Apps & Utilities</button>
+        <button class="filter-btn whitespace-nowrap" data-filter="Node & Blockchain" onclick="filterArticles('Node & Blockchain', this)">💻 Node & Blockchain</button>
+        <button class="filter-btn whitespace-nowrap" data-filter="Pi Commerce & Adoption" onclick="filterArticles('Pi Commerce & Adoption', this)">🛒 Pi Commerce</button>
+        <button class="filter-btn whitespace-nowrap" data-filter="Mainnet Migration & KYC" onclick="filterArticles('Mainnet Migration & KYC', this)">🚀 Migration & KYC</button>
       </div>
     </div>
   </section>
@@ -102,7 +98,7 @@
         type="search"
         id="article-search"
         class="search-input"
-        placeholder="Search articles, topics, tags..."
+        placeholder="Search updates, optimization metrics, checklists..."
         oninput="handleSearch(this.value)"
       />
     </div>
@@ -128,9 +124,9 @@
     <!-- Empty State -->
     <div id="empty-state" class="hidden text-center py-20">
       <div class="text-6xl mb-4">🔍</div>
-      <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" style="font-family:Poppins">No articles found</h3>
-      <p class="text-gray-500 dark:text-gray-400">Try a different search term or category.</p>
-      <button onclick="filterArticles('all', document.querySelector('[data-filter=all]'))" class="btn-outline mt-4 inline-flex">Show All Articles</button>
+      <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" style="font-family:Poppins">No items located</h3>
+      <p class="text-gray-500 dark:text-gray-400">Try modifying your query terms or sector filters.</p>
+      <button onclick="filterArticles('all', document.querySelector('[data-filter=all]'))" class="btn-outline mt-4 inline-flex">Show All Records</button>
     </div>
   </main>
 
@@ -143,7 +139,6 @@
     let activeSort = 'newest';
     let activeQuery = '';
 
-    // Check URL params for category filter
     const urlParams = new URLSearchParams(window.location.search);
     const urlCategory = urlParams.get('category');
 
@@ -166,17 +161,15 @@
     function renderArticles() {
       let filtered = [...allArticles];
 
-      // Apply category filter
+      // Switched to query against the clean string name for perfect matching
       if (activeFilter !== 'all') {
-        filtered = filtered.filter(a => a.categorySlug === activeFilter);
+        filtered = filtered.filter(a => a.category === activeFilter);
       }
 
-      // Apply search
       if (activeQuery) {
         filtered = searchArticles(activeQuery, filtered);
       }
 
-      // Apply sort
       if (activeSort === 'popular') {
         filtered.sort((a, b) => b.views - a.views);
       } else if (activeSort === 'liked') {
