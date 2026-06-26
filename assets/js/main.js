@@ -24,8 +24,6 @@ function renderHeader(activePage = '') {
     { href: 'index.html', label: 'Home', id: 'home' },
     { href: 'articles.html', label: 'Articles', id: 'articles' },
     { href: 'categories.html', label: 'Categories', id: 'categories' },
-    { href: 'about.html', label: 'About', id: 'about' },
-    { href: 'contact.html', label: 'Contact', id: 'contact' },
   ];
 
   const links = navLinks.map(link => `
@@ -41,9 +39,9 @@ function renderHeader(activePage = '') {
       <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
           <!-- Logo -->
-          <a href="./index.html" class="flex items-center gap-2 group" aria-label="Pi Network Ecosystem Hub">
+          <a href="index.html" class="flex items-center gap-2 group" aria-label="Pi Network Ecosystem Hub">
             <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-purple-500/30 transition-all duration-200">P</div>
-            <span class="logo-text text-lg font-bold hidden sm:block">Pi</span>
+            <span class="logo-text text-lg font-bold hidden sm:block">Pi Network</span>
           </a>
 
           <!-- Desktop Nav -->
@@ -77,7 +75,7 @@ function renderHeader(activePage = '') {
     <div id="mobile-menu" role="dialog" aria-label="Mobile navigation">
       <div id="mobile-menu-panel">
         <div class="flex items-center justify-between mb-6">
-          <span class="logo-text font-bold text-lg">Pi</span>
+          <span class="logo-text font-bold text-lg">Pi Network</span>
           <button id="mobile-menu-close" class="theme-toggle" aria-label="Close menu">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
           </button>
@@ -90,11 +88,7 @@ function renderHeader(activePage = '') {
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
             Search Articles
           </a>
-        </div>
-        <div class="mt-6 flex gap-3 flex-wrap">
-          <a href="https://www.linkedin.com/in/prakashphiroda" target="_blank" rel="noopener" class="social-link">in</a>
-          <a href="https://x.com/Piprotecter" target="_blank" rel="noopener" class="social-link">𝕏</a>
-          <a href="https://github.com/prakashphiroda314" target="_blank" rel="noopener" class="social-link">⌨</a>
+        
         </div>
       </div>
     </div>
@@ -121,47 +115,7 @@ function renderFooter() {
               Practical insights and comprehensive updates on the Pi Network ecosystem.
             </p>
             <p class="text-purple-400 font-semibold font-poppins text-sm mb-4">Learn. Build. Grow. Impact.</p>
-            <div class="flex gap-3 flex-wrap">
-              <a href="https://www.linkedin.com/in/prakashphiroda" target="_blank" rel="noopener" class="social-link" title="LinkedIn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-              </a>
-              <a href="https://x.com/Piprotecter" target="_blank" rel="noopener" class="social-link" title="Twitter/X">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-              </a>
-              <a href="https://instagram.com/prakashphiroda" target="_blank" rel="noopener" class="social-link" title="Instagram">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-              </a>
-              <a href="https://facebook.com/prakashphiroda" target="_blank" rel="noopener" class="social-link" title="Facebook">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-              </a>
-              <a href="https://github.com/prakashphiroda314" target="_blank" rel="noopener" class="social-link" title="GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-              </a>
-            </div>
           </div>
-
-          <!-- Categories -->
-          <div>
-            <h4 class="footer-heading">Categories</h4>
-            <div class="space-y-1">
-              <a href="categories.html#pi-network" class="footer-link">Pi Network</a>
-            </div>
-          </div>
-
-          <!-- Platform -->
-          <div>
-            <h4 class="footer-heading">Platform</h4>
-            <div class="space-y-1">
-              <a href="index.html" class="footer-link">Home</a>
-              <a href="articles.html" class="footer-link">All Articles</a>
-              <a href="about.html" class="footer-link">About Prakash</a>
-              <a href="search.html" class="footer-link">Search</a>
-              <a href="contact.html" class="footer-link">Contact</a>
-            
-            </div>
-          </div>
-
-  
 
         <!-- Bottom -->
         <div class="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -169,9 +123,8 @@ function renderFooter() {
             © ${new Date().getFullYear()} Pi Network Knowledge Hub. All rights reserved.
           </p>
           <div class="flex items-center gap-6">
-            <a href="sitemap.xml" class="text-gray-500 text-sm hover:text-gray-300 transition-colors">Sitemap</a>
             <span class="text-gray-700">•</span>
-            <span class="text-gray-500 text-sm">Made with ❤️ by Prakash Choudhary</span>
+            <span class="text-gray-500 text-sm">Made with ❤️ by Pi </span>
           </div>
         </div>
       </div>
@@ -346,7 +299,7 @@ function createArticleCard(article, size = 'default') {
 
   if (size === 'featured') {
     return `
-      <article class="featured-card group" onclick="window.location.href='/article.html?slug=${article.slug}'">
+      <article class="featured-card group" onclick="window.location.href='article.html?slug=${article.slug}'">
         <div class="overflow-hidden relative" style="aspect-ratio: 16/7;">
           <img
             src="${article.coverImage}"
@@ -382,7 +335,7 @@ function createArticleCard(article, size = 'default') {
   }
 
   return `
-    <article class="article-card group" onclick="window.location.href='/article.html?slug=${article.slug}'">
+    <article class="article-card group" onclick="window.location.href='article.html?slug=${article.slug}'">
       <div class="overflow-hidden relative" style="aspect-ratio: 16/9;">
         <img
           src="${article.coverImage}"
