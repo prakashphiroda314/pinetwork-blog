@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Search — Prakash Knowledge Hub</title>
-  <meta name="description" content="Search articles on AI, Pi Network, Web3, Data Analytics and more on Prakash Knowledge Hub." />
+  <meta name="description" content="Search articles on  Pi Network, Web3." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -27,7 +27,7 @@
       } 
     }
   </script>
-  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
   <script>
     (function() {
       const dark = localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
@@ -65,14 +65,9 @@
       <!-- Quick Topics -->
       <div id="quick-topics" class="flex flex-wrap gap-2 mb-8 animate-on-scroll">
         <span class="text-sm text-gray-500 dark:text-gray-400 mr-2 self-center">Popular:</span>
-        <button onclick="setSearch('Artificial Intelligence')" class="tag hover:text-[#5c247a] dark:hover:text-purple-400">🤖 AI</button>
+        
         <button onclick="setSearch('Pi Network')" class="tag hover:text-[#5c247a] dark:hover:text-purple-400">π Pi Network</button>
-        <button onclick="setSearch('Web3')" class="tag hover:text-[#5c247a] dark:hover:text-purple-400">⛓️ Web3</button>
-        <button onclick="setSearch('Data Analytics')" class="tag hover:text-[#5c247a] dark:hover:text-purple-400">📊 Data</button>
-        <button onclick="setSearch('LinkedIn')" class="tag hover:text-[#5c247a] dark:hover:text-purple-400">✨ Branding</button>
-        <button onclick="setSearch('Agriculture')" class="tag hover:text-[#5c247a] dark:hover:text-purple-400">🌾 Agri</button>
-        <button onclick="setSearch('ChatGPT')" class="tag hover:text-[#5c247a] dark:hover:text-purple-400">ChatGPT</button>
-        <button onclick="setSearch('career')" class="tag hover:text-[#5c247a] dark:hover:text-purple-400">Career</button>
+       
       </div>
 
       <!-- Results Count -->
@@ -86,7 +81,7 @@
         <div class="text-6xl mb-4">🔍</div>
         <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" style="font-family:Poppins">No results found</h3>
         <p class="text-gray-500 dark:text-gray-400 mb-4">Try different keywords or explore our categories.</p>
-        <a href="/categories.html" class="btn-outline inline-flex border-[#5c247a] text-[#5c247a] dark:text-purple-400">Browse Categories</a>
+        <a href="categories.html" class="btn-outline inline-flex border-[#5c247a] text-[#5c247a] dark:text-purple-400">Browse Categories</a>
       </div>
 
       <!-- Initial State -->
@@ -102,13 +97,13 @@
 
   <div id="footer-mount"></div>
 
-  <script src="/assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
   <script>
     let allArticles = [];
 
     function createSearchResult(article) {
       return `
-        <a href="/article.html?slug=${article.slug}" class="flex gap-4 p-4 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-purple-300 dark:hover:border-purple-700 transition-all group bg-white dark:bg-gray-900">
+        <a href="article.html?slug=${article.slug}" class="flex gap-4 p-4 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-purple-300 dark:hover:border-purple-700 transition-all group bg-white dark:bg-gray-900">
           <img src="${article.coverImage}" alt="${article.title}" class="w-20 h-16 object-cover rounded-lg flex-shrink-0" loading="lazy" />
           <div class="flex-1 min-w-0">
             <div class="flex items-center gap-2 mb-1">
@@ -171,14 +166,8 @@
 
       // Initial categories
       const cats = [
-        { name: 'AI', slug: 'Artificial Intelligence', icon: '🤖' },
         { name: 'Pi Network', slug: 'Pi Network', icon: 'π' },
         { name: 'Web3', slug: 'Web3', icon: '⛓️' },
-        { name: 'Data', slug: 'Data Analytics', icon: '📊' },
-        { name: 'Branding', slug: 'Personal Branding', icon: '✨' },
-        { name: 'Growth', slug: 'Digital Growth', icon: '🚀' },
-        { name: 'Education', slug: 'Education', icon: '🎓' },
-        { name: 'Agri-Tech', slug: 'Agri-Tech', icon: '🌾' },
       ];
       document.getElementById('initial-categories').innerHTML = cats.map(c => `
         <button onclick="setSearch('${c.slug}')" class="flex flex-col items-center gap-1 p-3 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-[#5c247a] dark:hover:border-purple-600 transition-all cursor-pointer bg-white dark:bg-gray-900 w-full">
