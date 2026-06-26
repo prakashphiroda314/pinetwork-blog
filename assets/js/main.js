@@ -7,7 +7,7 @@ let CATEGORIES = [];
 // Load articles from JSON
 async function loadArticles() {
   try {
-    const res = await fetch('./data/articles.json');
+    const res = await fetch('data/articles.json');
     const data = await res.json();
     ARTICLES = data.articles;
     CATEGORIES = data.categories;
@@ -22,10 +22,10 @@ async function loadArticles() {
 function renderHeader(activePage = '') {
   const navLinks = [
     { href: 'index.html', label: 'Home', id: 'home' },
-    { href: './articles.html', label: 'Articles', id: 'articles' },
-    { href: './categories.html', label: 'Categories', id: 'categories' },
-    { href: './about.html', label: 'About', id: 'about' },
-    { href: './contact.html', label: 'Contact', id: 'contact' },
+    { href: 'articles.html', label: 'Articles', id: 'articles' },
+    { href: 'categories.html', label: 'Categories', id: 'categories' },
+    { href: 'about.html', label: 'About', id: 'about' },
+    { href: 'contact.html', label: 'Contact', id: 'contact' },
   ];
 
   const links = navLinks.map(link => `
@@ -41,9 +41,9 @@ function renderHeader(activePage = '') {
       <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
           <!-- Logo -->
-          <a href="/" class="flex items-center gap-2 group" aria-label="Prakash Knowledge Hub">
+          <a href="./index.html" class="flex items-center gap-2 group" aria-label="Pi Network Ecosystem Hub">
             <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-purple-500/30 transition-all duration-200">P</div>
-            <span class="logo-text text-lg font-bold hidden sm:block">Prakash Knowledge</span>
+            <span class="logo-text text-lg font-bold hidden sm:block">Pi</span>
           </a>
 
           <!-- Desktop Nav -->
@@ -54,7 +54,7 @@ function renderHeader(activePage = '') {
           <!-- Actions -->
           <div class="flex items-center gap-2">
             <!-- Search -->
-            <a href="/search.html" class="theme-toggle" aria-label="Search">
+            <a href="search.html" class="theme-toggle" aria-label="Search">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
             </a>
 
@@ -77,7 +77,7 @@ function renderHeader(activePage = '') {
     <div id="mobile-menu" role="dialog" aria-label="Mobile navigation">
       <div id="mobile-menu-panel">
         <div class="flex items-center justify-between mb-6">
-          <span class="logo-text font-bold text-lg">Prakash Knowledge</span>
+          <span class="logo-text font-bold text-lg">Pi</span>
           <button id="mobile-menu-close" class="theme-toggle" aria-label="Close menu">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
           </button>
@@ -86,7 +86,7 @@ function renderHeader(activePage = '') {
           ${mobileLinks}
         </div>
         <div class="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
-          <a href="/search.html" class="flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200">
+          <a href="search.html" class="flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
             Search Articles
           </a>
@@ -113,9 +113,9 @@ function renderFooter() {
 
           <!-- Brand -->
           <div class="lg:col-span-2">
-            <a href="/" class="flex items-center gap-3 mb-4">
-              <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center text-white font-bold text-xl">P</div>
-              <span class="logo-text text-xl font-bold">Prakash Knowledge Hub</span>
+            <a href="index.html" class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center text-white font-bold text-xl">Pi</div>
+              <span class="logo-text text-xl font-bold">Pi Network Knowledge Hub</span>
             </a>
             <p class="text-gray-400 text-sm leading-relaxed mb-6 max-w-sm">
               Practical insights and comprehensive updates on the Pi Network ecosystem.
@@ -144,7 +144,7 @@ function renderFooter() {
           <div>
             <h4 class="footer-heading">Categories</h4>
             <div class="space-y-1">
-              <a href="/categories.html#pi-network" class="footer-link">Pi Network</a>
+              <a href="categories.html#pi-network" class="footer-link">Pi Network</a>
             </div>
           </div>
 
@@ -152,34 +152,24 @@ function renderFooter() {
           <div>
             <h4 class="footer-heading">Platform</h4>
             <div class="space-y-1">
-              <a href="/" class="footer-link">Home</a>
-              <a href="/articles.html" class="footer-link">All Articles</a>
-              <a href="/about.html" class="footer-link">About Prakash</a>
-              <a href="/search.html" class="footer-link">Search</a>
-              <a href="/contact.html" class="footer-link">Contact</a>
-              <a href="https://prakashfirodawork-ctrl.github.io/Prakash-Identity-Hub/" target="_blank" rel="noopener" class="footer-link">Portfolio</a>
+              <a href="index.html" class="footer-link">Home</a>
+              <a href="articles.html" class="footer-link">All Articles</a>
+              <a href="about.html" class="footer-link">About Prakash</a>
+              <a href="search.html" class="footer-link">Search</a>
+              <a href="contact.html" class="footer-link">Contact</a>
+            
             </div>
           </div>
 
-          <!-- Newsletter -->
-          <div>
-            <h4 class="footer-heading">Stay Updated</h4>
-            <p class="text-gray-400 text-sm mb-4 leading-relaxed">Get insights and announcements regarding Pi Network delivered straight to your inbox.</p>
-            <div class="flex">
-              <input type="email" placeholder="Your email" class="newsletter-input text-sm" id="footer-email" />
-              <button class="newsletter-btn text-sm" onclick="subscribeNewsletter()">→</button>
-            </div>
-            <p class="text-gray-500 text-xs mt-2">No spam. Unsubscribe anytime.</p>
-          </div>
-        </div>
+  
 
         <!-- Bottom -->
         <div class="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p class="text-gray-500 text-sm">
-            © ${new Date().getFullYear()} Prakash Knowledge Hub. All rights reserved.
+            © ${new Date().getFullYear()} Pi Network Knowledge Hub. All rights reserved.
           </p>
           <div class="flex items-center gap-6">
-            <a href="/sitemap.xml" class="text-gray-500 text-sm hover:text-gray-300 transition-colors">Sitemap</a>
+            <a href="sitemap.xml" class="text-gray-500 text-sm hover:text-gray-300 transition-colors">Sitemap</a>
             <span class="text-gray-700">•</span>
             <span class="text-gray-500 text-sm">Made with ❤️ by Prakash Choudhary</span>
           </div>
@@ -289,18 +279,6 @@ function initScrollTop() {
   }
 }
 
-// ===== NEWSLETTER =====
-function subscribeNewsletter(inputId = 'footer-email') {
-  const input = document.getElementById(inputId);
-  if (!input) return;
-  const email = input.value.trim();
-  if (!email || !email.includes('@')) {
-    showToast('Please enter a valid email address', 'error');
-    return;
-  }
-  showToast('Thank you for subscribing! 🎉', 'success');
-  input.value = '';
-}
 
 // ===== TOAST NOTIFICATIONS =====
 function showToast(message, type = 'info') {
