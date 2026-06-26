@@ -7,7 +7,7 @@ let CATEGORIES = [];
 // Load articles from JSON
 async function loadArticles() {
   try {
-    const res = await fetch('data/articles.json');
+    const res = await fetch('/data/articles.json');
     const data = await res.json();
     ARTICLES = data.articles;
     CATEGORIES = data.categories;
