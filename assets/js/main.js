@@ -8,13 +8,20 @@ let CATEGORIES = [];
 async function loadArticles() {
   try {
     const res = await fetch('data/articles.json');
+
+    console.log("Status:", res.status);
+
     const data = await res.json();
+
+    console.log(data);
+
     ARTICLES = data.articles || [];
     CATEGORIES = data.categories || [];
+
     return data;
+
   } catch (e) {
-    console.error('Failed to load articles:', e);
-    return { articles: [], categories: [] };
+    console.error(e);
   }
 }
 
