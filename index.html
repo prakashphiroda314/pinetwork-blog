@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prakash Knowledge Hub — Learn. Build. Grow. Impact.</title>
+  <meta name="description" content="Prakash Knowledge Hub — Practical insights on Artificial Intelligence, Pi Network, Web3, Data Analytics, Personal Branding, Digital Growth, Education and Agri-Tech by Prakash Choudhary." />
+  <meta name="keywords" content="AI education, Pi Network, Web3, Data Analytics, Personal Branding, Digital Growth, Agri-Tech, Prakash Choudhary" />
+  <meta name="author" content="Prakash Choudhary" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://prakash-knowledge-hub.netlify.app/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://prakash-knowledge-hub.netlify.app/" />
+  <meta property="og:title" content="Prakash Knowledge Hub — Learn. Build. Grow. Impact." />
+  <meta property="og:description" content="Practical insights on AI, Pi Network, Web3, Data Analytics, Personal Branding and more." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@Piprotecter" />
+  <meta name="twitter:title" content="Prakash Knowledge Hub" />
+  <meta name="twitter:description" content="Learn. Build. Grow. Impact." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6D28D9',
+            'primary-dark': '#5B21B6',
+            accent: '#F59E0B',
+          },
+          fontFamily: {
+            heading: ['Poppins', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Prakash Knowledge Hub",
+    "url": "https://prakash-knowledge-hub.netlify.app/",
+    "description": "Personal knowledge platform on AI, Pi Network, Web3, Data Analytics and more",
+    "author": {
+      "@type": "Person",
+      "name": "Prakash Choudhary",
+      "url": "https://prakash-knowledge-hub.netlify.app/about.html"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://prakash-knowledge-hub.netlify.app/search.html?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Theme init -->
+  <script>
+    (function() {
+      const dark = localStorage.getItem('theme') === 'dark' ||
+        (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      if (dark) document.documentElement.classList.add('dark');
+    })();
+  </script>
+</head>
+<body class="bg-white dark:bg-gray-950">
+
+  <!-- Header Mount -->
+  <div id="header-mount"></div>
+
+  <!-- Reading Progress -->
+  <div id="reading-progress"></div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero-section pt-16" aria-label="Hero">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-grid"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+      <div class="max-w-3xl">
+
+        <!-- Badge -->
+        <div class="hero-badge mb-6 animate-slide-up">
+          <span class="dot"></span>
+          <span>Prakash Knowledge Hub</span>
+          <span class="text-yellow-400">✦</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="hero-title mb-6 animate-slide-up" style="animation-delay:0.1s">
+          <span class="block">Learn.</span>
+          <span class="block accent">Build.</span>
+          <span class="block">Grow.</span>
+          <span class="block" style="color:rgba(255,255,255,0.9)">Impact.</span>
+        </h1>
+
+        <!-- Description -->
+        <p class="hero-description mb-8 animate-slide-up" style="animation-delay:0.2s">
+          Practical insights on <strong style="color:#C4B5FD">Artificial Intelligence</strong>,
+          <strong style="color:#FCD34D">Pi Network</strong>,
+          <strong style="color:#C4B5FD">Web3</strong>, Data Analytics, Personal Branding,
+          Digital Growth, Education and Agri-Tech.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap gap-4 animate-slide-up" style="animation-delay:0.3s">
+          <a href="/articles.html" class="btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+            Explore Articles
+          </a>
+          <a href="/about.html" class="btn-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            About Prakash
+          </a>
+        </div>
+
+        <!-- Stats Row -->
+        <div class="flex flex-wrap gap-8 mt-12 pt-8 border-t border-white/10 animate-slide-up" style="animation-delay:0.4s">
+          <div>
+            <div class="text-3xl font-bold text-white" style="font-family:Poppins">50+</div>
+            <div class="text-sm text-gray-400 mt-1">Articles Published</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-white" style="font-family:Poppins">10K+</div>
+            <div class="text-sm text-gray-400 mt-1">Monthly Readers</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-white" style="font-family:Poppins">8</div>
+            <div class="text-sm text-gray-400 mt-1">Topics Covered</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold" style="font-family:Poppins;background:linear-gradient(135deg,#F59E0B,#FCD34D);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">60M+</div>
+            <div class="text-sm text-gray-400 mt-1">Pi Pioneers Reached</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
+        <div class="w-1.5 h-3 bg-white/50 rounded-full"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED ARTICLE ===== -->
+  <section class="py-16 lg:py-24 bg-white dark:bg-gray-950" aria-label="Featured Article">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-header animate-on-scroll">
+        <span class="section-eyebrow">Featured</span>
+        <h2 class="section-title text-3xl lg:text-4xl mt-2">Editor's Pick</h2>
+      </div>
+
+      <div id="featured-article" class="animate-on-scroll">
+        <!-- Populated by JS -->
+        <div class="skeleton h-96 rounded-2xl"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPLORE TOPICS ===== -->
+  <section class="py-16 lg:py-24 bg-gray-50 dark:bg-gray-900" aria-label="Topics">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-header animate-on-scroll">
+        <span class="section-eyebrow">Explore</span>
+        <h2 class="section-title text-3xl lg:text-4xl mt-2">Topics That Matter</h2>
+        <p class="section-description mt-3">Eight focused areas of knowledge, curated for the curious and the ambitious.</p>
+      </div>
+
+      <div id="topics-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LATEST ARTICLES ===== -->
+  <section class="py-16 lg:py-24 bg-white dark:bg-gray-950" aria-label="Latest Articles">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between mb-8 animate-on-scroll">
+        <div>
+          <span class="section-eyebrow">Fresh</span>
+          <h2 class="section-title text-3xl lg:text-4xl mt-2">Latest Articles</h2>
+        </div>
+        <a href="/articles.html" class="btn-outline hidden sm:inline-flex">
+          View All
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+
+      <div id="latest-articles" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Populated by JS -->
+        <div class="skeleton h-80 rounded-2xl"></div>
+        <div class="skeleton h-80 rounded-2xl"></div>
+        <div class="skeleton h-80 rounded-2xl"></div>
+      </div>
+
+      <div class="text-center mt-8 sm:hidden">
+        <a href="/articles.html" class="btn-outline inline-flex">View All Articles</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== POPULAR READS ===== -->
+  <section class="py-16 lg:py-24 bg-gray-50 dark:bg-gray-900" aria-label="Popular Reads">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+        <!-- Popular List -->
+        <div>
+          <div class="animate-on-scroll mb-8">
+            <span class="section-eyebrow">Trending</span>
+            <h2 class="section-title text-3xl lg:text-4xl mt-2">Popular Reads</h2>
+            <p class="section-description text-left mt-2">Articles readers keep coming back to.</p>
+          </div>
+          <div id="popular-reads" class="space-y-3">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- Join Community -->
+        <div class="animate-on-scroll">
+          <div class="gradient-card">
+            <div class="relative z-10">
+              <div class="w-16 h-16 bg-yellow-400/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <span class="text-3xl">🌐</span>
+              </div>
+              <h3 class="text-white font-bold text-2xl mb-3" style="font-family:Poppins">Join the Community</h3>
+              <p class="text-purple-200 text-sm mb-8 leading-relaxed">
+                Get the latest insights on AI, Web3, Pi Network, Data Analytics and Digital Growth — delivered to your network.
+              </p>
+              <a href="https://www.linkedin.com/in/prakashphiroda" target="_blank" rel="noopener" class="inline-flex items-center gap-3 bg-white text-purple-700 font-bold px-6 py-3 rounded-xl hover:bg-purple-50 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-1" style="font-family:Poppins">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                Connect on LinkedIn
+              </a>
+              <div class="mt-6 flex items-center justify-center gap-4">
+                <a href="https://x.com/Piprotecter" target="_blank" rel="noopener" class="text-purple-300 hover:text-white transition-colors text-sm">@Piprotecter on X</a>
+                <span class="text-purple-600">·</span>
+                <a href="https://instagram.com/prakashphiroda" target="_blank" rel="noopener" class="text-purple-300 hover:text-white transition-colors text-sm">Instagram</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pi Network CTA -->
+          <div class="pi-card mt-6 animate-on-scroll">
+            <div class="relative z-10">
+              <div class="text-white/60 text-sm font-semibold uppercase tracking-wider mb-2">Join Pi Network</div>
+              <h4 class="text-white text-xl font-bold mb-2" style="font-family:Poppins">Mine Pi on Your Phone</h4>
+              <p class="text-purple-200 text-sm mb-4">Use invitation code:</p>
+              <div class="pi-code mb-4" onclick="copyToClipboard('prakashphiroda')" style="cursor:pointer" title="Click to copy">
+                prakashphiroda
+              </div>
+              <p class="text-purple-300 text-xs mb-4">Click code to copy · Tap below to download</p>
+              <a href="https://minepi.com/prakashphiroda" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold px-6 py-3 rounded-xl transition-all duration-200 shadow-lg hover:-translate-y-1" style="font-family:Poppins">
+                <span>π</span>
+                Download Pi App
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MORE ARTICLES CATEGORIES ===== -->
+  <section class="py-16 lg:py-24 bg-white dark:bg-gray-950" aria-label="Browse by Category">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-header animate-on-scroll">
+        <span class="section-eyebrow">Discover</span>
+        <h2 class="section-title text-3xl lg:text-4xl mt-2">Browse by Category</h2>
+      </div>
+
+      <div id="category-previews" class="space-y-16">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Mount -->
+  <div id="footer-mount"></div>
+
+  <!-- Scripts -->
+  <script src="/assets/js/main.js"></script>
+  <script>
+    const TOPICS = [
+      { name: 'Artificial Intelligence', slug: 'artificial-intelligence', icon: '🤖', desc: 'AI tools & insights', delay: '0s', color: '#6D28D9' },
+      { name: 'Pi Network', slug: 'pi-network', icon: 'π', desc: 'Mining & ecosystem', delay: '0.1s', color: '#7C3AED' },
+      { name: 'Web3 & Blockchain', slug: 'web3-blockchain', icon: '⛓️', desc: 'Decentralized tech', delay: '0.2s', color: '#8B5CF6' },
+      { name: 'Data Analytics', slug: 'data-analytics', icon: '📊', desc: 'Data-driven decisions', delay: '0.3s', color: '#A78BFA' },
+      { name: 'Personal Branding', slug: 'personal-branding', icon: '✨', desc: 'Build your brand', delay: '0.4s', color: '#F59E0B' },
+      { name: 'Digital Growth', slug: 'digital-growth', icon: '🚀', desc: 'Grow your audience', delay: '0.5s', color: '#EF4444' },
+      { name: 'Education', slug: 'education', icon: '🎓', desc: 'Learning & EdTech', delay: '0.6s', color: '#10B981' },
+      { name: 'Agri-Tech', slug: 'agri-tech', icon: '🌾', desc: 'Smart farming', delay: '0.7s', color: '#059669' },
+    ];
+
+    async function initHomePage() {
+      const data = await initPage('home');
+      const articles = data.articles || [];
+
+      // Featured Article
+      const featured = articles.find(a => a.featured) || articles[0];
+      if (featured) {
+        document.getElementById('featured-article').innerHTML = createArticleCard(featured, 'featured');
+      }
+
+      // Topics Grid
+      const topicsHtml = TOPICS.map(t => `
+        <a href="/articles.html?category=${t.slug}" class="topic-card animate-on-scroll" style="--delay:${t.delay}">
+          <span class="topic-icon" style="--delay:${t.delay}">${t.icon}</span>
+          <div class="font-semibold text-sm text-gray-900 dark:text-white mb-1" style="font-family:Poppins">${t.name}</div>
+          <div class="text-xs text-gray-500 dark:text-gray-400">${t.desc}</div>
+        </a>
+      `).join('');
+      document.getElementById('topics-grid').innerHTML = topicsHtml;
+
+      // Latest Articles (most recent 6, excluding featured)
+      const latest = articles
+        .sort((a, b) => new Date(b.date) - new Date(a.date))
+        .slice(0, 6);
+      document.getElementById('latest-articles').innerHTML = latest.map(a => createArticleCard(a)).join('');
+
+      // Popular Reads (top 8 by views)
+      const popular = [...articles].sort((a, b) => b.views - a.views).slice(0, 8);
+      document.getElementById('popular-reads').innerHTML = popular.map((a, i) => `
+        <a href="/article.html?slug=${a.slug}" class="popular-item animate-on-scroll">
+          <span class="popular-number">${String(i + 1).padStart(2, '0')}</span>
+          <div class="flex-1 min-w-0">
+            <div class="font-semibold text-sm text-gray-900 dark:text-white truncate" style="font-family:Poppins">${a.title}</div>
+            <div class="flex items-center gap-3 mt-1 text-xs text-gray-400">
+              <span>${formatNumber(a.views)} views</span>
+              <span>·</span>
+              <span>${getReadingTime(a.readTime)}</span>
+            </div>
+          </div>
+        </a>
+      `).join('');
+
+      // Category Previews (show 2 articles per category for top 4 categories)
+      const topCats = ['Artificial Intelligence', 'Pi Network', 'Data Analytics', 'Personal Branding'];
+      const catIcons = { 'Artificial Intelligence': '🤖', 'Pi Network': 'π', 'Data Analytics': '📊', 'Personal Branding': '✨' };
+      const catPreviews = topCats.map(cat => {
+        const catArticles = articles.filter(a => a.category === cat).slice(0, 3);
+        if (!catArticles.length) return '';
+        const catSlug = cat.toLowerCase().replace(/\s+/g, '-').replace(/[&]/g, '').replace(/--/g, '-');
+        return `
+          <div class="animate-on-scroll">
+            <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center gap-3">
+                <span class="text-2xl">${catIcons[cat] || '📌'}</span>
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white" style="font-family:Poppins">${cat}</h3>
+              </div>
+              <a href="/articles.html?category=${catSlug}" class="text-sm text-purple-600 dark:text-purple-400 font-medium hover:underline flex items-center gap-1">
+                See all
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              ${catArticles.map(a => createArticleCard(a)).join('')}
+            </div>
+          </div>
+        `;
+      }).join('');
+      document.getElementById('category-previews').innerHTML = catPreviews;
+
+      // Re-init animations for new elements
+      setTimeout(initAnimations, 100);
+    }
+
+    initHomePage();
+  </script>
+</body>
+</html>
