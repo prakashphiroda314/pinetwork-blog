@@ -13,7 +13,7 @@
   <script>
     tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#6D28D9', 'primary-dark': '#5B21B6', accent: '#F59E0B' }, fontFamily: { heading: ['Poppins', 'sans-serif'], body: ['Inter', 'sans-serif'] } } } }
   </script>
-  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="./assets/css/styles.css" />
   <script>
     (function() {
       const dark = localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
@@ -52,7 +52,7 @@
             <nav class="breadcrumb mb-6" aria-label="Breadcrumb">
               <a href="/">Home</a>
               <span class="breadcrumb-sep">/</span>
-              <a href="/articles.html">Ecosystem Archive</a>
+              <a href="./articles.html">Ecosystem Archive</a>
               <span class="breadcrumb-sep">/</span>
               <span id="breadcrumb-category" class="text-purple-600 dark:text-purple-400"></span>
             </nav>
@@ -112,7 +112,7 @@
                       <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                     </a>
                     <a href="https://x.com/Piprotecter" target="_blank" rel="noopener" class="social-link">𝕏</a>
-                    <a href="/about.html" class="text-sm text-purple-600 dark:text-purple-400 font-medium hover:underline ml-2 self-center">View Profile →</a>
+                    <a href="./about.html" class="text-sm text-purple-600 dark:text-purple-400 font-medium hover:underline ml-2 self-center">View Profile →</a>
                   </div>
                 </div>
               </div>
@@ -155,13 +155,13 @@
       <div class="text-6xl mb-4">📭</div>
       <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-3" style="font-family:Poppins">Record Not Located</h2>
       <p class="text-gray-500 dark:text-gray-400 mb-6">The requested ecosystem documentation module could not be traced.</p>
-      <a href="/articles.html" class="btn-primary inline-flex">Return to Documentation Archive</a>
+      <a href="./articles.html" class="btn-primary inline-flex">Return to Documentation Archive</a>
     </div>
   </main>
 
   <div id="footer-mount"></div>
 
-  <script src="/assets/js/main.js"></script>
+  <script src="./assets/js/main.js"></script>
   <script>
     async function initArticlePage() {
       const data = await initPage('articles');
@@ -205,7 +205,7 @@
 
       // Tags
       document.getElementById('article-tags').innerHTML = article.tags.map(t =>
-        `<a href="/search.html?q=${encodeURIComponent(t)}" class="tag">${t}</a>`
+        `<a href="./search.html?q=${encodeURIComponent(t)}" class="tag">${t}</a>`
       ).join('');
 
       // Body
@@ -246,7 +246,7 @@
       let prevNextHtml = '';
       if (prev) {
         prevNextHtml += `
-          <a href="/article.html?slug=${prev.slug}" class="p-4 border border-gray-200 dark:border-gray-800 rounded-xl hover:border-purple-300 dark:hover:border-purple-700 transition-all group">
+          <a href="./article.html?slug=${prev.slug}" class="p-4 border border-gray-200 dark:border-gray-800 rounded-xl hover:border-purple-300 dark:hover:border-purple-700 transition-all group">
             <div class="text-xs text-gray-400 mb-2 flex items-center gap-1">← Previous Module</div>
             <div class="font-semibold text-sm text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors line-clamp-2" style="font-family:Poppins">${prev.title}</div>
           </a>
@@ -256,7 +256,7 @@
       }
       if (next) {
         prevNextHtml += `
-          <a href="/article.html?slug=${next.slug}" class="p-4 border border-gray-200 dark:border-gray-800 rounded-xl hover:border-purple-300 dark:hover:border-purple-700 transition-all group text-right">
+          <a href="./article.html?slug=${next.slug}" class="p-4 border border-gray-200 dark:border-gray-800 rounded-xl hover:border-purple-300 dark:hover:border-purple-700 transition-all group text-right">
             <div class="text-xs text-gray-400 mb-2 flex items-center gap-1 justify-end">Next Module →</div>
             <div class="font-semibold text-sm text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors line-clamp-2" style="font-family:Poppins">${next.title}</div>
           </a>
