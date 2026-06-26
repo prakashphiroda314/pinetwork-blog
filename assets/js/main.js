@@ -9,8 +9,8 @@ async function loadArticles() {
   try {
     const res = await fetch('data/articles.json');
     const data = await res.json();
-    ARTICLES = data.articles;
-    CATEGORIES = data.categories;
+    ARTICLES = data.articles || [];
+    CATEGORIES = data.categories || [];
     return data;
   } catch (e) {
     console.error('Failed to load articles:', e);
