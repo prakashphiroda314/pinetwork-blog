@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Categories — Prakash Knowledge Hub</title>
-  <meta name="description" content="Explore articles by category on Prakash Knowledge Hub — AI, Pi Network, Web3, Data Analytics, Personal Branding, Digital Growth, Education and Agri-Tech." />
+  <title>Ecosystem Hub — Pi Network Insights</title>
+  <meta name="description" content="Explore technical documentation, deployment guides, and marketplace trends across the core sectors of the Pi Network ecosystem." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://prakash-knowledge-hub.netlify.app/categories.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,9 +28,9 @@
   <!-- Hero -->
   <section class="pt-28 pb-16 bg-gradient-to-br from-purple-950 via-purple-900 to-indigo-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <span class="hero-badge mb-6 inline-flex"><span class="dot"></span>Knowledge Domains</span>
-      <h1 class="text-4xl lg:text-5xl font-bold text-white mb-4" style="font-family:Poppins">Browse by Category</h1>
-      <p class="text-purple-200 text-lg max-w-2xl mx-auto">Eight focused knowledge domains, each with in-depth articles, insights and practical guidance.</p>
+      <span class="hero-badge mb-6 inline-flex"><span class="dot"></span>Ecosystem Pillars</span>
+      <h1 class="text-4xl lg:text-5xl font-bold text-white mb-4" style="font-family:Poppins">Pi Network Hub</h1>
+      <p class="text-purple-200 text-lg max-w-2xl mx-auto">Four core structural sectors, packed with deployment resources, optimization telemetry, and migration tracking dashboards.</p>
     </div>
   </section>
 
@@ -50,27 +50,23 @@
 
   <script src="/assets/js/main.js"></script>
   <script>
+    // Configured exclusively to handle the 4 Pi Network Sub-Topics
     const CATEGORY_DATA = [
-      { name: 'Artificial Intelligence', slug: 'artificial-intelligence', icon: '🤖', desc: 'AI tools, machine learning, ChatGPT, and the future of intelligent systems.', color: '#6D28D9', bg: 'from-purple-600 to-purple-800' },
-      { name: 'Pi Network', slug: 'pi-network', icon: 'π', desc: 'Everything about Pi Network — mining, KYC, mainnet, ecosystem and opportunities.', color: '#7C3AED', bg: 'from-violet-600 to-violet-800' },
-      { name: 'Web3 & Blockchain', slug: 'web3-blockchain', icon: '⛓️', desc: 'Decentralized web, DeFi, NFTs, DAOs, smart contracts and blockchain fundamentals.', color: '#8B5CF6', bg: 'from-purple-500 to-indigo-700' },
-      { name: 'Data Analytics', slug: 'data-analytics', icon: '📊', desc: 'Data skills, tools (Power BI, Python, SQL), visualization, and storytelling with data.', color: '#A78BFA', bg: 'from-violet-500 to-purple-700' },
-      { name: 'Personal Branding', slug: 'personal-branding', icon: '✨', desc: 'Building an authentic digital presence, LinkedIn strategy, and long-term brand equity.', color: '#F59E0B', bg: 'from-yellow-500 to-amber-700' },
-      { name: 'Digital Growth', slug: 'digital-growth', icon: '🚀', desc: 'Content strategy, audience growth, SEO, YouTube, and monetization for creators.', color: '#EF4444', bg: 'from-red-500 to-rose-700' },
-      { name: 'Education', slug: 'education', icon: '🎓', desc: 'EdTech, AI in classrooms, future of learning, and making education accessible.', color: '#10B981', bg: 'from-emerald-500 to-teal-700' },
-      { name: 'Agri-Tech', slug: 'agri-tech', icon: '🌾', desc: 'Precision farming, AI in agriculture, blockchain supply chains, and smart farming.', color: '#059669', bg: 'from-green-600 to-emerald-800' },
+      { name: 'Pi Apps & Utilities', slug: 'pi-apps-utilities', icon: '📱', desc: 'Pi browser ecosystem projects, developer environments, and interface tooling resources.', color: '#6D28D9', bg: 'from-purple-600 to-purple-800' },
+      { name: 'Node & Blockchain', slug: 'node-blockchain', icon: '💻', desc: 'Node client telemetry configurations, network docker setups, ports mapping, and validator protocols.', color: '#7C3AED', bg: 'from-violet-600 to-violet-800' },
+      { name: 'Pi Commerce & Adoption', slug: 'pi-commerce-adoption', icon: '🛒', desc: 'Global peer-to-peer commerce trackers, local merchant integration maps, and transaction processing guidelines.', color: '#8B5CF6', bg: 'from-purple-500 to-indigo-700' },
+      { name: 'Mainnet Migration & KYC', slug: 'mainnet-migration-kyc', icon: '🚀', desc: 'Open Mainnet migration checklists, decentralized identity verification steps, and smart-wallet security structures.', color: '#F59E0B', bg: 'from-yellow-500 to-amber-700' }
     ];
 
-    // Check URL anchor
     const hash = window.location.hash.replace('#', '');
 
     async function initCategoriesPage() {
       const data = await initPage('categories');
       const articles = data.articles || [];
 
-      // Category cards
+      // Category cards matching on strict structural category string names
       const cardsHtml = CATEGORY_DATA.map(cat => {
-        const count = articles.filter(a => a.categorySlug === cat.slug).length;
+        const count = articles.filter(a => a.category === cat.name).length;
         return `
           <a href="#${cat.slug}" class="topic-card animate-on-scroll group" onclick="document.getElementById('${cat.slug}').scrollIntoView({behavior:'smooth'});return false;">
             <span class="topic-icon text-4xl mb-3 block">${cat.icon}</span>
@@ -82,9 +78,9 @@
       }).join('');
       document.getElementById('category-cards').innerHTML = cardsHtml;
 
-      // Category sections with articles
+      // Category sections listing matching filter items
       const sectionsHtml = CATEGORY_DATA.map(cat => {
-        const catArticles = articles.filter(a => a.categorySlug === cat.slug);
+        const catArticles = articles.filter(a => a.category === cat.name);
         if (!catArticles.length) return '';
         return `
           <section id="${cat.slug}" class="animate-on-scroll scroll-mt-24">
@@ -107,7 +103,6 @@
 
       setTimeout(() => {
         initAnimations();
-        // Scroll to hash if present
         if (hash) {
           const el = document.getElementById(hash);
           if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 500);
