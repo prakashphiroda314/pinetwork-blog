@@ -10,7 +10,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#6D28D9', 'primary-dark': '#5B21B6', accent: '#F59E0B' }, fontFamily: { heading: ['Poppins', 'sans-serif'], body: ['Inter', 'sans-serif'] } } } }
+    tailwind.config = { 
+      darkMode: 'class', 
+      theme: { 
+        extend: { 
+          colors: { 
+            primary: '#5c247a', // Pi Purple
+            'primary-dark': '#4a1d62', 
+            accent: '#fed102' // Pi Yellow/Gold
+          }, 
+          fontFamily: { 
+            heading: ['Poppins', 'sans-serif'], 
+            body: ['Inter', 'sans-serif'] 
+          } 
+        } 
+      } 
+    }
   </script>
   <link rel="stylesheet" href="/assets/css/styles.css" />
   <script>
@@ -38,7 +53,7 @@
         <input
           type="search"
           id="search-input"
-          class="search-input text-lg py-4 pl-14 pr-6"
+          class="search-input text-lg py-4 pl-14 pr-6 focus:border-[#5c247a] focus:ring-[#5c247a]"
           placeholder="Search articles, topics, AI, Pi Network..."
           autofocus
         />
@@ -50,14 +65,14 @@
       <!-- Quick Topics -->
       <div id="quick-topics" class="flex flex-wrap gap-2 mb-8 animate-on-scroll">
         <span class="text-sm text-gray-500 dark:text-gray-400 mr-2 self-center">Popular:</span>
-        <button onclick="setSearch('Artificial Intelligence')" class="tag hover:text-purple-600">🤖 AI</button>
-        <button onclick="setSearch('Pi Network')" class="tag hover:text-purple-600">π Pi Network</button>
-        <button onclick="setSearch('Web3')" class="tag hover:text-purple-600">⛓️ Web3</button>
-        <button onclick="setSearch('Data Analytics')" class="tag hover:text-purple-600">📊 Data</button>
-        <button onclick="setSearch('LinkedIn')" class="tag hover:text-purple-600">✨ Branding</button>
-        <button onclick="setSearch('Agriculture')" class="tag hover:text-purple-600">🌾 Agri</button>
-        <button onclick="setSearch('ChatGPT')" class="tag hover:text-purple-600">ChatGPT</button>
-        <button onclick="setSearch('career')" class="tag hover:text-purple-600">Career</button>
+        <button onclick="setSearch('Artificial Intelligence')" class="tag hover:text-[#5c247a] dark:hover:text-purple-400">🤖 AI</button>
+        <button onclick="setSearch('Pi Network')" class="tag hover:text-[#5c247a] dark:hover:text-purple-400">π Pi Network</button>
+        <button onclick="setSearch('Web3')" class="tag hover:text-[#5c247a] dark:hover:text-purple-400">⛓️ Web3</button>
+        <button onclick="setSearch('Data Analytics')" class="tag hover:text-[#5c247a] dark:hover:text-purple-400">📊 Data</button>
+        <button onclick="setSearch('LinkedIn')" class="tag hover:text-[#5c247a] dark:hover:text-purple-400">✨ Branding</button>
+        <button onclick="setSearch('Agriculture')" class="tag hover:text-[#5c247a] dark:hover:text-purple-400">🌾 Agri</button>
+        <button onclick="setSearch('ChatGPT')" class="tag hover:text-[#5c247a] dark:hover:text-purple-400">ChatGPT</button>
+        <button onclick="setSearch('career')" class="tag hover:text-[#5c247a] dark:hover:text-purple-400">Career</button>
       </div>
 
       <!-- Results Count -->
@@ -71,7 +86,7 @@
         <div class="text-6xl mb-4">🔍</div>
         <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" style="font-family:Poppins">No results found</h3>
         <p class="text-gray-500 dark:text-gray-400 mb-4">Try different keywords or explore our categories.</p>
-        <a href="/categories.html" class="btn-outline inline-flex">Browse Categories</a>
+        <a href="/categories.html" class="btn-outline inline-flex border-[#5c247a] text-[#5c247a] dark:text-purple-400">Browse Categories</a>
       </div>
 
       <!-- Initial State -->
@@ -97,10 +112,10 @@
           <img src="${article.coverImage}" alt="${article.title}" class="w-20 h-16 object-cover rounded-lg flex-shrink-0" loading="lazy" />
           <div class="flex-1 min-w-0">
             <div class="flex items-center gap-2 mb-1">
-              <span class="category-badge text-xs">${article.category}</span>
+              <span class="category-badge text-xs bg-[#5c247a]/10 text-[#5c247a] dark:text-purple-300 border border-[#5c247a]/20">${article.category}</span>
               <time class="text-xs text-gray-400">${formatDate(article.date)}</time>
             </div>
-            <h3 class="font-semibold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors text-sm leading-snug mb-1" style="font-family:Poppins">${article.title}</h3>
+            <h3 class="font-semibold text-gray-900 dark:text-white group-hover:text-[#5c247a] dark:group-hover:text-purple-400 transition-colors text-sm leading-snug mb-1" style="font-family:Poppins">${article.title}</h3>
             <p class="text-gray-500 dark:text-gray-400 text-xs line-clamp-1">${article.excerpt}</p>
             <div class="flex items-center gap-3 mt-2 text-xs text-gray-400">
               <span>${getReadingTime(article.readTime)}</span>
@@ -166,7 +181,7 @@
         { name: 'Agri-Tech', slug: 'Agri-Tech', icon: '🌾' },
       ];
       document.getElementById('initial-categories').innerHTML = cats.map(c => `
-        <button onclick="setSearch('${c.slug}')" class="flex flex-col items-center gap-1 p-3 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-purple-300 dark:hover:border-purple-700 transition-all cursor-pointer bg-white dark:bg-gray-900">
+        <button onclick="setSearch('${c.slug}')" class="flex flex-col items-center gap-1 p-3 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-[#5c247a] dark:hover:border-purple-600 transition-all cursor-pointer bg-white dark:bg-gray-900 w-full">
           <span class="text-2xl">${c.icon}</span>
           <span class="text-xs font-medium text-gray-700 dark:text-gray-300">${c.name}</span>
         </button>
