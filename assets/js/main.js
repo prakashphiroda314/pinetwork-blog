@@ -42,7 +42,7 @@ function renderHeader(activePage = '') {
         <div class="flex items-center justify-between h-16">
           <!-- Logo -->
           <a href="/" class="flex items-center gap-2 group" aria-label="Prakash Knowledge Hub">
-            <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-content-center items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-purple-500/30 transition-all duration-200">P</div>
+            <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-purple-500/30 transition-all duration-200">P</div>
             <span class="logo-text text-lg font-bold hidden sm:block">Prakash Knowledge</span>
           </a>
 
@@ -94,7 +94,7 @@ function renderHeader(activePage = '') {
         <div class="mt-6 flex gap-3 flex-wrap">
           <a href="https://www.linkedin.com/in/prakashphiroda" target="_blank" rel="noopener" class="social-link">in</a>
           <a href="https://x.com/Piprotecter" target="_blank" rel="noopener" class="social-link">𝕏</a>
-          <a href="https://github.com/prakashfirodawork-ctrl" target="_blank" rel="noopener" class="social-link">⌨</a>
+          <a href="https://github.com/prakashphiroda314" target="_blank" rel="noopener" class="social-link">⌨</a>
         </div>
       </div>
     </div>
@@ -118,7 +118,7 @@ function renderFooter() {
               <span class="logo-text text-xl font-bold">Prakash Knowledge Hub</span>
             </a>
             <p class="text-gray-400 text-sm leading-relaxed mb-6 max-w-sm">
-              Practical insights on Artificial Intelligence, Pi Network, Web3, Data Analytics, Personal Branding, Digital Growth, Education and Agri-Tech.
+              Practical insights and comprehensive updates on the Pi Network ecosystem.
             </p>
             <p class="text-purple-400 font-semibold font-poppins text-sm mb-4">Learn. Build. Grow. Impact.</p>
             <div class="flex gap-3 flex-wrap">
@@ -134,7 +134,7 @@ function renderFooter() {
               <a href="https://facebook.com/prakashphiroda" target="_blank" rel="noopener" class="social-link" title="Facebook">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
               </a>
-              <a href="https://github.com/prakashfirodawork-ctrl" target="_blank" rel="noopener" class="social-link" title="GitHub">
+              <a href="https://github.com/prakashphiroda314" target="_blank" rel="noopener" class="social-link" title="GitHub">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
               </a>
             </div>
@@ -144,14 +144,7 @@ function renderFooter() {
           <div>
             <h4 class="footer-heading">Categories</h4>
             <div class="space-y-1">
-              <a href="/categories.html#artificial-intelligence" class="footer-link">Artificial Intelligence</a>
               <a href="/categories.html#pi-network" class="footer-link">Pi Network</a>
-              <a href="/categories.html#web3-blockchain" class="footer-link">Web3 & Blockchain</a>
-              <a href="/categories.html#data-analytics" class="footer-link">Data Analytics</a>
-              <a href="/categories.html#personal-branding" class="footer-link">Personal Branding</a>
-              <a href="/categories.html#digital-growth" class="footer-link">Digital Growth</a>
-              <a href="/categories.html#education" class="footer-link">Education</a>
-              <a href="/categories.html#agri-tech" class="footer-link">Agri-Tech</a>
             </div>
           </div>
 
@@ -171,7 +164,7 @@ function renderFooter() {
           <!-- Newsletter -->
           <div>
             <h4 class="footer-heading">Stay Updated</h4>
-            <p class="text-gray-400 text-sm mb-4 leading-relaxed">Get insights on AI, Web3, Pi Network and Digital Growth delivered to your inbox.</p>
+            <p class="text-gray-400 text-sm mb-4 leading-relaxed">Get insights and announcements regarding Pi Network delivered straight to your inbox.</p>
             <div class="flex">
               <input type="email" placeholder="Your email" class="newsletter-input text-sm" id="footer-email" />
               <button class="newsletter-btn text-sm" onclick="subscribeNewsletter()">→</button>
@@ -368,17 +361,10 @@ function getReadingTime(mins) {
 // ===== ARTICLE CARD COMPONENT =====
 function createArticleCard(article, size = 'default') {
   const categoryColors = {
-    'Artificial Intelligence': '#6D28D9',
-    'Pi Network': '#7C3AED',
-    'Web3 & Blockchain': '#8B5CF6',
-    'Data Analytics': '#A78BFA',
-    'Personal Branding': '#F59E0B',
-    'Digital Growth': '#EF4444',
-    'Education': '#10B981',
-    'Agri-Tech': '#059669'
+    'Pi Network': '#7C3AED'
   };
 
-  const color = categoryColors[article.category] || '#6D28D9';
+  const color = categoryColors[article.category] || '#7C3AED';
 
   if (size === 'featured') {
     return `
@@ -496,7 +482,6 @@ function initPageTransitions() {
     const href = link.getAttribute('href');
     if (href && !href.startsWith('#') && !href.startsWith('http') && !href.startsWith('mailto') && !href.startsWith('tel')) {
       link.addEventListener('click', (e) => {
-        // Let normal navigation happen but add a fade
         document.body.style.opacity = '0';
         document.body.style.transition = 'opacity 0.2s ease';
       });
@@ -508,7 +493,6 @@ function initPageTransitions() {
 async function initPage(activePage = '') {
   initTheme();
 
-  // Render header and footer mounts if they exist
   if (document.getElementById('header-mount')) {
     renderHeader(activePage);
   }
@@ -516,7 +500,6 @@ async function initPage(activePage = '') {
     renderFooter();
   }
 
-  // Create scroll to top button
   const scrollBtn = document.createElement('button');
   scrollBtn.id = 'scroll-top';
   scrollBtn.setAttribute('aria-label', 'Scroll to top');
@@ -527,14 +510,12 @@ async function initPage(activePage = '') {
   initReadingProgress();
   initLazyLoad();
 
-  // Fade in body
   document.body.style.opacity = '0';
   document.body.style.transition = 'opacity 0.3s ease';
   requestAnimationFrame(() => {
     document.body.style.opacity = '1';
   });
 
-  // Init animations after short delay
   setTimeout(initAnimations, 100);
 
   return await loadArticles();
