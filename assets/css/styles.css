@@ -259,7 +259,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== HERO SECTION ===== */
 .hero-section {
-  min-height: auto;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   background: linear-gradient(135deg, #1C0A26 0%, #311143 50%, #441A58 100%);
